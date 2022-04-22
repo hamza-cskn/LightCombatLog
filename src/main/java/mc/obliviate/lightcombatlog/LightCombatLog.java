@@ -38,7 +38,6 @@ public class LightCombatLog extends JavaPlugin {
 	private void loadHandlers() {
 		loadConfig();
 		untagTask.register(ChatColor.translateAlternateColorCodes('&', configuration.getString("timer.format", "ERROR")), configuration.getInt("combat-check-interval", 5));
-
 	}
 
 	private List<UUID> stringListToWorldUuidList(List<String> worldNames) {
