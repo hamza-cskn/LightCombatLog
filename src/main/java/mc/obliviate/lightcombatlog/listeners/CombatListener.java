@@ -65,8 +65,8 @@ public class CombatListener implements Listener {
 
 	@EventHandler
 	public void onDeath(PlayerDeathEvent e) {
-		if (plugin.getCombatTagManager().isTagged(e.getEntity())) {
-			plugin.getCombatTagManager().untag(e.getEntity());
+		if (plugin.getCombatTagManager().isTagged((Player) e.getEntity())) {
+			plugin.getCombatTagManager().untag((Player) e.getEntity()); //casting may be necessary for target platform.
 		}
 	}
 
